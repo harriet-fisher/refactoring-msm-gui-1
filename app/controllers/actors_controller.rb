@@ -8,7 +8,7 @@ class ActorsController < ApplicationController
   def show
     the_id = params.fetch("path_id")
     @the_actor = Actor.where({:id => the_id }).at(0)
-    
+  
     render({ :template => "actor_templates/show" })
   end
 
